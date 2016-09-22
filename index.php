@@ -7,10 +7,14 @@
 <?php
     require 'config.php';
     require 'connection.php';
+    require 'database.php';
     
-    $link = DBConnect();
+    $nome = "Ronald Albert";
+    $dados = array('nome' => 'Ronald Albert', 
+                   'idade' => 17);
     
-    DBClose($link);
+    $query = "INSERT INTO clientes (nome) VALUES ('$nome')";
+    var_dump(DBExecute($query));
 ?>    
 </body>
 </html>
