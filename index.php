@@ -9,9 +9,9 @@
     require 'connection.php';
     require 'database.php';
     
-    $clientes = array('nome' => 'Ronald Albert', 'email' => 'ronaldalbert1609@gmail.com', 'idade' => 18, 'status' => 1);
+    $clientes = DBRead('clientes', "WHERE status = 1", 'nome, email');
     
-    $grava = DBCreate('clientes', $clientes);    
+    var_dump($clientes);      
     
 ?>    
 </body>
