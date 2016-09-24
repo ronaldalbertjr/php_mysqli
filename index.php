@@ -9,12 +9,10 @@
     require 'connection.php';
     require 'database.php';
     
-    $nome = "Ronald Albert";
-    $dados = array('nome' => 'Ronald Albert', 
-                   'idade' => 17);
+    $clientes = array('nome' => 'Ronald Albert', 'email' => 'ronaldalbert1609@gmail.com', 'idade' => 18, 'status' => 1);
     
-    $query = "INSERT INTO clientes (nome) VALUES ('$nome')";
-    var_dump(DBExecute($query));
+    $grava = DBCreate('clientes', $clientes);    
+    
 ?>    
 </body>
 </html>
